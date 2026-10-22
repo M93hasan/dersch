@@ -1,0 +1,67 @@
+name: Build Android test APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build web app
+        run: npm run build
+
+      - name: Create Android project
+        run: npx cap add android
+
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Build debug APK
+        working-directory: android
+        run: chmod +x gradlew && ./gradlew assembleDebug
+
+      - name: Upload APK as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AOL-Cep-Dersim-debug-APK
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish latest test APK release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: test-apk
+          name: AÖL Cep Dersim - Test APK
+          prerelease: true
+          make_latest: false
+          body: |
+            Otomatik oluşturulan test APK'sı. Bu sürüm deneme amaçlıdır.
+            Kitap PDF'leri bu APK'ya dahil değildir; uygulama katalog ve arayüz testi içindir.
+          files: android/app/build/outputs/apk/debug/app-debug.apk
+          overwrite_files: true
