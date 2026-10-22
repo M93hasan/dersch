@@ -1,15 +1,29 @@
 # AÖL Cep Dersim
 
-Açık Öğretim Lisesi için çevrimdışı çalışabilen ders, özet, günlük görev ve test uygulaması. Web arayüzü Android APK'ya Capacitor ile paketlenebilir.
+Açık Öğretim Lisesi için mobil uyumlu çalışma uygulaması. Ders kataloğu, okuma ekranı, konu testleri, yanlış sorular, günlük görevler, tema seçimi ve cihazda ilerleme kaydı içerir. React + Vite arayüzü Capacitor ile Android projesine paketlenebilir.
 
-## Proje yapısı
+## Ders kataloğu
 
-- `pdf_kitaplar/`: MEB PDF kitapları (git'e kitap eklemeyin; `.gitignore` kapsamındadır).
-- `scripts/pdf_to_json.py`: PDF metnini ve olası çoktan seçmeli soruları `data/dersler.json` dosyasına çıkarır.
-- `data/dersler.json`: Uygulamanın kullandığı ders/ünite/soru verisi.
-- `app/`: React + Vite mobil uyumlu arayüz.
+Uygulamada 34 derslik başlangıç kataloğu bulunur. Bir dersin gerçek konu içeriği, kitabı yerel PDF olarak eklendikten ve dönüştürme betiği çalıştırıldıktan sonra görünür.
 
-## 1. PDF verisini oluşturma (Windows)
+## PDF kitapları nereye konur?
+
+PDF kitaplarını GitHub'a yüklemek gerekmez. Windows bilgisayarında projenin içindeki `pdf_kitaplar/` klasörüne kaydet:
+
+```text
+dersch/
+  pdf_kitaplar/
+    Akaid.pdf
+    Almanca.pdf
+    Biyoloji.pdf
+    Türk Dili ve Edebiyatı.pdf
+```
+
+Dosya adını mümkün olduğunca dersin tam adıyla eşleştir. Büyük PDF'ler `.gitignore` tarafından GitHub commit'lerinden hariç tutulur; kitap dosyaları yalnızca senin bilgisayarında kalır. Böylece GitHub'ın dosya boyutu sınırına takılmazsın.
+
+## Windows 11: PDF kitaplarını dönüştür
+
+Python 3.12 ve Node.js LTS kurulu olmalı. PowerShell'de proje klasöründe:
 
 ```powershell
 py -3.12 -m venv .venv
@@ -18,30 +32,38 @@ python -m pip install -r requirements.txt
 python scripts/pdf_to_json.py
 ```
 
-Tarama olarak kaydedilmiş (metin seçilemeyen) PDF'lerde OCR gerekir. Soru ayrıştırma sezgiseldir; oluşturulan soruları uygulamada kullanmadan önce kontrol edin. Cevap anahtarı PDF'te açıkça bulunmuyorsa sistem cevap uydurmaz.
+Betik hem `data/dersler.json` hem de `public/data/dersler.json` dosyasını üretir. Kitabı olmayan dersler katalogda kalır. PDF'nin içindeki metin seçilemiyorsa (taranmış sayfa/görüntü PDF) OCR gerekir. Ünite ve çoktan seçmeli soru tespiti sezgiseldir; her kitapta doğru çalışacağı garanti edilmez. Cevap anahtarı açık biçimde tanınamazsa doğru cevap uydurulmaz ve doğrulama gerekir.
 
-## 2. Uygulamayı çalıştırma
+## Uygulamayı bilgisayarda çalıştır
 
 ```powershell
 npm install
 npm run dev
 ```
 
-## 3. Android APK
+Vite'ın gösterdiği yerel adresi tarayıcıda aç.
 
-Node.js LTS ve Android Studio (Android SDK) kurulu olmalı:
+## Android APK hazırlama
+
+Node.js LTS, Android Studio ve Android SDK gerekir:
 
 ```powershell
+npm install
 npm run build
 npx cap add android
 npx cap sync android
 npx cap open android
 ```
 
-Android Studio'da **Build > Build Bundle(s) / APK(s) > Build APK(s)**. İlk `cap add android` komutu Android klasörünü bir kez oluşturur.
+`npx cap add android` yalnızca Android projesi ilk kez oluşturulurken çalıştırılır. Sonraki güncellemelerde `npm run build` ve `npx cap sync android` yeterlidir. Android Studio'da **Build > Build Bundle(s) / APK(s) > Build APK(s)** seç.
 
-## Önemli notlar
+## Büyük PDF kitaplarını ileride çevrimiçi sunmak
 
-- İlerleme, yanlış sorular, puan ve ayarlar cihazdaki localStorage'da saklanır; uygulama internet olmadan çalışabilir.
-- PDF'ler ve çıkarılan içerik telifli olabilir. Yalnızca kullanma hakkınız olan kitapları kullanın ve içerikleri herkese açık şekilde dağıtmayın.
-- Bu başlangıç sürümü PDF metnini ve soru kalıplarını çıkarır; görsel/tablo ağırlıklı veya OCR gerektiren sayfalar elle doğrulanmalıdır.
+GitHub kod deposu büyük PDF arşivi olarak kullanılmamalı. Kitapların telefondan çevrimiçi indirilmesi istenirse ayrı bir nesne depolama alanı (ör. Cloudflare R2) yapılandırılabilir. Bu depo henüz bu repoda yapılandırılmış değildir. Çevrimdışı okuma için PDF veya içeriklerin cihaza indirilmesi gerekir.
+
+## Veri ve telif notları
+
+- İlerleme, yanlış sorular, puan ve tema ayarları cihazın yerel depolamasında tutulur.
+- PDF'den çıkarılan metin, özet ve sorular doğruluk açısından kontrol edilmelidir; bu başlangıç betiği yapay zekâ ile özet üretmez.
+- Yalnızca kullanım/dağıtım hakkına sahip olduğun kitapları kullan. MEB materyallerini herkese açık biçimde yeniden dağıtmadan önce ilgili kullanım koşullarını kontrol et.
+- Bu depo için APK derlemesi ve gerçek cihaz testi ayrıca yapılmalıdır.
