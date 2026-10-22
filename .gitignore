@@ -1,0 +1,8 @@
+node_modules/
+dist/
+android/
+.venv/
+__pycache__/
+*.py[cod]
+pdf_kitaplar/*.pdf
+!pdf_kitaplar/.gitkeep
