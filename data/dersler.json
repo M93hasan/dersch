@@ -1,4 +1,277 @@
 {
   "schema_version": 1,
-  "dersler": []
+  "dersler": [
+    {
+      "id": "akaid",
+      "ad": "Akaid",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "almanca",
+      "ad": "Almanca",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "biyoloji",
+      "ad": "Biyoloji",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "cografya",
+      "ad": "Coğrafya",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "cagdas_turk_ve_dunya_tarihi",
+      "ad": "Çağdaş Türk ve Dünya Tarihi",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "demokrasi_ve_i_nsan_haklari",
+      "ad": "Demokrasi ve İnsan Hakları",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "din_kulturu_ve_ahlak_bilgisi",
+      "ad": "Din Kültürü ve Ahlak Bilgisi",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "dinler_tarihi",
+      "ad": "Dinler Tarihi",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "ekonomi",
+      "ad": "Ekonomi",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "felsefe",
+      "ad": "Felsefe",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "fikih",
+      "ad": "Fıkıh",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "fizik",
+      "ad": "Fizik",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "fransizca",
+      "ad": "Fransızca",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "girisimcilik",
+      "ad": "Girişimcilik",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "i_ngilizce",
+      "ad": "İngilizce",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "i_slam_kultur_ve_medeniyeti",
+      "ad": "İslam Kültür ve Medeniyeti",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "i_sletme",
+      "ad": "İşletme",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "kelam",
+      "ad": "Kelam",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "kimya",
+      "ad": "Kimya",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "mantik",
+      "ad": "Mantık",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "matematik",
+      "ad": "Matematik",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "mesleki_gelisim_atolyesi",
+      "ad": "Mesleki Gelişim Atölyesi",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "osmanli_turkcesi",
+      "ad": "Osmanlı Türkçesi",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "peygamberimizin_hayati",
+      "ad": "Peygamberimizin Hayatı",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "psikoloji",
+      "ad": "Psikoloji",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "saglik_bilgisi_ve_trafik_kulturu",
+      "ad": "Sağlık Bilgisi ve Trafik Kültürü",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "sanat_tarihi",
+      "ad": "Sanat Tarihi",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "secmeli_ortak_turk_tarihi",
+      "ad": "Seçmeli Ortak Türk Tarihi",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "siyer",
+      "ad": "Siyer",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "sosyoloji",
+      "ad": "Sosyoloji",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "tarih",
+      "ad": "Tarih",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "temel_dini_bilgiler",
+      "ad": "Temel Dini Bilgiler",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "turk_dili_ve_edebiyati",
+      "ad": "Türk Dili ve Edebiyatı",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    },
+    {
+      "id": "turkiye_cumhuriyeti_i_nkilap_tarihi_ve_ataturkculuk",
+      "ad": "Türkiye Cumhuriyeti İnkılap Tarihi ve Atatürkçülük",
+      "kaynak_dosya": null,
+      "sayfa_sayisi": 0,
+      "unite_sayisi": 0,
+      "uniter": []
+    }
+  ]
 }
