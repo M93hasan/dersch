@@ -1,5 +1,13 @@
 # AÖL Cep Dersim
 
+## 📱 Android APK — test sürümü
+
+- **[APK'yı indir (son test sürümü)](https://github.com/M93hasan/dersch/releases/download/test-apk/app-debug.apk)**
+- [APK derleme durumunu ve son çalıştırmaları gör](https://github.com/M93hasan/dersch/actions/workflows/android-apk.yml)
+
+GitHub Actions, `main` dalına yeni commit geldiğinde Android debug APK'sını otomatik oluşturmaya çalışır ve `test-apk` sürümündeki APK dosyasını günceller. İndirme bağlantısı ilk derleme başarıyla tamamlandıktan sonra çalışır. Bu, imzalı mağaza sürümü değil, test amaçlı debug APK'sıdır. İlk açılışta Android güvenlik uyarısı çıkabilir. Şimdilik kitap PDF'leri uygulama paketine dahil değildir.
+
+
 Açık Öğretim Lisesi için mobil uyumlu çalışma uygulaması. Ders kataloğu, okuma ekranı, konu testleri, yanlış sorular, günlük görevler, tema seçimi ve cihazda ilerleme kaydı içerir. React + Vite arayüzü Capacitor ile Android projesine paketlenebilir.
 
 ## Ders kataloğu
