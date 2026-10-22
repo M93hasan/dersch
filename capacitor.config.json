@@ -1,0 +1,6 @@
+{
+  "appId": "site.serula.aolcepdersim",
+  "appName": "AÖL Cep Dersim",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
